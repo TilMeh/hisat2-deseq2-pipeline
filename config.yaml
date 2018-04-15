@@ -1,0 +1,18 @@
+# This file should contain everything to configure the workflow on a global scale.
+# In case of sample based data, it should be complemented by a samples.tsv file that contains
+# one row per sample. It can be parsed easily via pandas.
+
+# path to file that contains sample information 
+samples: "data/samples.tsv"
+folders:
+        data_folder: "data"
+        output_folder: "data/output"
+        trim_folder: "data/output/trims"
+# path to file that contains information on reference FASTA files
+references: "data/references.tsv"
+# trim galore parameters
+trim_galore:
+        phred_quality: "20"
+hisat:
+        index_prefix: "index"
+        set_index_folder: "export HISAT2_INDEXES=../data"
